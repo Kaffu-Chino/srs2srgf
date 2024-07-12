@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
+    <!-- 将本机库包含在单个 .exe 文件中。这会增加 .exe 文件的大小，但减少了发布目录中的文件数量 -->
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <!--尝试将所有内容（包括资源文件等）打包进单个 .exe 文件 -->
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\logo.ico" />
+  </ItemGroup>
+
+</Project>
